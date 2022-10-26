@@ -32,9 +32,9 @@ def getbuttons(index):
 @client.event
 async def on_ready():
     print(f'Bot connected, logged in as {client.user}, ID {client.user.id}')
-    await tree.sync(guild=discord.Object(id=887820100743352410))
+    await tree.sync()
 
-@tree.command(name = "guessplace", description = "Guess the name of a place from its flag!", guild=discord.Object(id=887820100743352410))
+@tree.command(name = "guessplace", description = "Guess the name of a place from its flag!")
 
 async def words(interaction):
     input = getbuttons(0)
